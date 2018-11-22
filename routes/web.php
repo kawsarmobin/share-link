@@ -21,3 +21,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('category', 'Admin\CategoriesController')->except('destroy');
 Route::get('category/delete/{id}', 'Admin\CategoriesController@destroy')->name('category.destroy');
+
+Route::resource('storedurl', 'Admin\StoredUrlsController')->except('destroy');
+Route::get('storedurl/delete/{id}', 'Admin\StoredUrlsController@destroy')->name('storedurl.destroy');

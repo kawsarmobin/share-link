@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <!-- META SECTION -->
-        <title>Joli Admin - Responsive Bootstrap Admin Template</title>
+        <title>Stored Your URLs</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -41,19 +41,17 @@
                             </div>
                         </div>
                     </li>
-                    <li class="xn-title">Navigation</li>
                     <li>
                         <a href="{!! route('home') !!}"><span class="fa fa-desktop"></span> <span class="xn-text">Dashboard</span></a>
                     </li>
                     <li>
                         <a href="pages-profile.html" class="profile-control-left"><span class="fa fa-info"></span> <span class="xn-text">Profile</span></a>
                     </li>
-                    <li class="xn-title">Components</li>
                     <li>
                         <a href="{!! route('category.index') !!}"><span class="fa fa-users"></span> <span class="xn-text">Category</span></a>
                     </li>
                     <li>
-                        <a href="#"><span class="fa fa-table"></span> <span class="xn-text">Your Links</span></a>
+                        <a href="{!! route('storedurl.index') !!}"><span class="fa fa-table"></span> <span class="xn-text">Your Links</span></a>
                     </li>
 
                 </ul>
@@ -138,6 +136,8 @@
         <script type="text/javascript" src="{!! asset('admin/js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js') !!}"></script>
         <script type="text/javascript" src="{!! asset('admin/js/plugins/scrolltotop/scrolltopcontrol.js') !!}"></script>
 
+        <script type="text/javascript" src="{!! asset('admin/js/plugins/datatables/jquery.dataTables.min.js') !!}"></script>
+
         <script type="text/javascript" src="{!! asset('admin/js/plugins/morris/raphael-min.js') !!}"></script>
         <script type="text/javascript" src="{!! asset('admin/js/plugins/morris/morris.min.js') !!}"></script>
         <script type="text/javascript" src="{!! asset('admin/js/plugins/rickshaw/d3.v3.js') !!}"></script>
@@ -153,12 +153,10 @@
 
         <!-- START TEMPLATE -->
         {{-- <script type="text/javascript" src="{!! asset('admin/js/settings.js') !!}"></script> --}}
-
         <script type="text/javascript" src="{!! asset('admin/js/plugins.js') !!}"></script>
         <script type="text/javascript" src="{!! asset('admin/js/actions.js') !!}"></script>
-
         <script type="text/javascript" src="{!! asset('admin/js/demo_dashboard.js') !!}"></script>
-
+        <!-- END TEMPLATE -->
 
         <script src="{{ asset('js/toastr.min.js') }}"></script>
         <script>
@@ -172,7 +170,7 @@
           @endif
 
         </script>
-        <!-- END TEMPLATE -->
+
     <!-- END SCRIPTS -->
     </body>
 </html>
