@@ -12,6 +12,7 @@
 
         <!-- CSS INCLUDE -->
         <link rel="stylesheet" type="text/css" id="theme" href="{!! asset('admin/css/theme-default.css') !!}"/>
+        <link rel="stylesheet" href="{{ asset('css/toastr.min.css') }}">
         <!-- EOF CSS INCLUDE -->
     </head>
     <body>
@@ -157,6 +158,20 @@
         <script type="text/javascript" src="{!! asset('admin/js/actions.js') !!}"></script>
 
         <script type="text/javascript" src="{!! asset('admin/js/demo_dashboard.js') !!}"></script>
+
+
+        <script src="{{ asset('js/toastr.min.js') }}"></script>
+        <script>
+
+          @if (Session::has('success'))
+            toastr.success("{{ Session::get('success') }}")
+          @endif
+
+          @if (Session::has('info'))
+            toastr.info("{{ Session::get('info') }}")
+          @endif
+
+        </script>
         <!-- END TEMPLATE -->
     <!-- END SCRIPTS -->
     </body>

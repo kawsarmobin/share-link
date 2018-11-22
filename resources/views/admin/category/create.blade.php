@@ -16,6 +16,9 @@
 
                 <form class="form-horizontal" action="{!! route('category.store') !!}" method="post">
                     @csrf
+
+                    @include('includes.errors')
+
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h3 class="panel-title"><strong>Create Category</strong></h3>

@@ -45,7 +45,7 @@
                                 </div>
                                 <div class="profile-controls">
                                     <a style="top: 22px" href="{!! route('category.edit', $category->id) !!}" class="profile-control-left"><span class="fa fa-edit"></span></a>
-                                    <a style="top: 22px" href="{!! route('category.destroy', $category->id) !!}" class="profile-control-right"><span class="fa fa-trash-o"></span></a>
+                                    <a style="top: 22px" href="{!! route('category.destroy', $category->id) !!}" onclick="return confirm('Are you sure?')" class="profile-control-right"><span class="fa fa-trash-o"></span></a>
                                 </div>
                             </div>
                         </div>
