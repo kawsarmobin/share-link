@@ -23,7 +23,7 @@
                 <!-- START X-NAVIGATION -->
                 <ul class="x-navigation">
                     <li class="xn-logo">
-                        <a href="index.html">Joli Admin</a>
+                        <a href="{!! route('home') !!}">Joli Admin</a>
                         <a href="#" class="x-navigation-control"></a>
                     </li>
                     <li class="xn-profile">
@@ -42,42 +42,17 @@
                     </li>
                     <li class="xn-title">Navigation</li>
                     <li>
-                        <a href="index.html"><span class="fa fa-desktop"></span> <span class="xn-text">Dashboard</span></a>
+                        <a href="{!! route('home') !!}"><span class="fa fa-desktop"></span> <span class="xn-text">Dashboard</span></a>
                     </li>
                     <li>
-                        <a href="pages-profile.html" class="profile-control-left"><span class="fa fa-info"></span>Profile</a>
-                    </li>
-                    <li>
-                        <a href="pages-address-book.html"><span class="fa fa-users"></span>Category</a>
+                        <a href="pages-profile.html" class="profile-control-left"><span class="fa fa-info"></span> <span class="xn-text">Profile</span></a>
                     </li>
                     <li class="xn-title">Components</li>
-                    <li class="xn-openable">
-                        <a href="#"><span class="fa fa-pencil"></span> <span class="xn-text">Forms</span></a>
-                        <ul>
-                            <li>
-                                <a href="form-layouts-two-column.html"><span class="fa fa-tasks"></span> Form Layouts</a>
-                                <div class="informer informer-danger">New</div>
-                                <ul>
-                                    <li><a href="form-layouts-one-column.html"><span class="fa fa-align-justify"></span> One Column</a></li>
-                                    <li><a href="form-layouts-two-column.html"><span class="fa fa-th-large"></span> Two Column</a></li>
-                                    <li><a href="form-layouts-tabbed.html"><span class="fa fa-table"></span> Tabbed</a></li>
-                                    <li><a href="form-layouts-separated.html"><span class="fa fa-th-list"></span> Separated Rows</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="form-elements.html"><span class="fa fa-file-text-o"></span> Elements</a></li>
-                            <li><a href="form-validation.html"><span class="fa fa-list-alt"></span> Validation</a></li>
-                            <li><a href="form-wizards.html"><span class="fa fa-arrow-right"></span> Wizards</a></li>
-                            <li><a href="form-editors.html"><span class="fa fa-text-width"></span> WYSIWYG Editors</a></li>
-                            <li><a href="form-file-handling.html"><span class="fa fa-floppy-o"></span> File Handling</a></li>
-                        </ul>
+                    <li>
+                        <a href="{!! route('category.index') !!}"><span class="fa fa-users"></span> <span class="xn-text">Category</span></a>
                     </li>
-                    <li class="xn-openable">
-                        <a href="tables.html"><span class="fa fa-table"></span> <span class="xn-text">Tables</span></a>
-                        <ul>
-                            <li><a href="table-basic.html"><span class="fa fa-align-justify"></span> Basic</a></li>
-                            <li><a href="table-datatables.html"><span class="fa fa-sort-alpha-desc"></span> Data Tables</a></li>
-                            <li><a href="table-export.html"><span class="fa fa-download"></span> Export Tables</a></li>
-                        </ul>
+                    <li>
+                        <a href="#"><span class="fa fa-table"></span> <span class="xn-text">Your Links</span></a>
                     </li>
 
                 </ul>
@@ -95,13 +70,15 @@
                         <a href="#" class="x-navigation-minimize"><span class="fa fa-dedent"></span></a>
                     </li>
                     <!-- END TOGGLE NAVIGATION -->
+
                     <!-- SEARCH -->
-                    <li class="xn-search">
+                    {{-- <li class="xn-search">
                         <form role="form">
                             <input type="text" name="search" placeholder="Search..."/>
                         </form>
-                    </li>
+                    </li> --}}
                     <!-- END SEARCH -->
+
                     <!-- SIGN OUT -->
                     <li class="xn-icon-button pull-right">
                         <a href="#" class="mb-control" data-box="#mb-signout"><span class="fa fa-sign-out"></span></a>
@@ -113,11 +90,7 @@
 
 
                 <!-- PAGE CONTENT WRAPPER -->
-                <div class="page-content-wrap">
-
-                    @yield('content')
-
-                </div>
+                @yield('content')
                 <!-- END PAGE CONTENT WRAPPER -->
 
 
