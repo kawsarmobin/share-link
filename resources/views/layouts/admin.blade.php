@@ -29,11 +29,11 @@
                     </li>
                     <li class="xn-profile">
                         <a href="#" class="profile-mini">
-                            <img src="{!! asset('admin/assets/images/users/avatar.jpg') !!}" alt="John Doe"/>
+                            <img src="{!! asset('admin/assets/images/users/no-image.jpg') !!}" alt="John Doe"/>
                         </a>
                         <div class="profile">
                             <div class="profile-image">
-                                <img src="{!! asset('admin/assets/images/users/avatar.jpg') !!}" alt="John Doe"/>
+                                <img src="{!! asset('admin/assets/images/users/no-image.jpg') !!}" alt="John Doe"/>
                             </div>
                             <div class="profile-data">
                                 <div class="profile-data-name">John Doe</div>
@@ -45,13 +45,13 @@
                         <a href="{!! route('home') !!}"><span class="fa fa-desktop"></span> <span class="xn-text">Dashboard</span></a>
                     </li>
                     <li>
-                        <a href="pages-profile.html" class="profile-control-left"><span class="fa fa-info"></span> <span class="xn-text">Profile</span></a>
+                        <a href="pages-profile.html" class="profile-control-left"><span class="fa fa-user"></span> <span class="xn-text">Profile</span></a>
                     </li>
                     <li>
-                        <a href="{!! route('category.index') !!}"><span class="fa fa-users"></span> <span class="xn-text">Category</span></a>
+                        <a href="{!! route('category.index') !!}"><span class="fa fa-save"></span> <span class="xn-text">Category</span></a>
                     </li>
                     <li>
-                        <a href="{!! route('storedurl.index') !!}"><span class="fa fa-table"></span> <span class="xn-text">Your Links</span></a>
+                        <a href="{!! route('storedurl.index') !!}"><span class="fa fa-th-list"></span> <span class="xn-text">Your Links</span></a>
                     </li>
 
                 </ul>

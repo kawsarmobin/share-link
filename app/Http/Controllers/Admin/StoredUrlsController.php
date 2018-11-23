@@ -18,7 +18,8 @@ class StoredUrlsController extends Controller
     public function index()
     {
         return view('admin.storedUrl.index')
-                ->with('storedUrls', StoredUrl::all());
+                ->with('storedUrls', StoredUrl::all())
+                ->with('categories', Category::all());
     }
 
     /**
@@ -134,5 +135,15 @@ class StoredUrlsController extends Controller
         }
 
         return redirect()->back();
+    }
+
+    public function singleCategory($id)
+    {
+        $singleCategory = StoredUrl::where('category_id', $id)->get();
+
+        return view('admin.storedUrl.singleCategory')
+                ->with('singleCategory', $singleCategory)
+                ->with('category', Category::find($id))
+                ->with('categories', Category::all());
     }
 }
