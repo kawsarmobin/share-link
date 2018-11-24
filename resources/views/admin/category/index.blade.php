@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-md-12">
 
-                <div class="panel panel-default push-up-20">
+                <div class="panel panel-info push-up-20">
                     <div class="panel-body">
                         <form class="form-horizontal">
                             <div class="form-group">
@@ -15,7 +15,7 @@
                                     <h2 style="margin: 0px">Categories <small>{{ $categories->count() }}</small></h2>
                                 </div>
                                 <div class="col-md-4">
-                                    <a class="btn btn-success btn-block" href="{!! route('category.create') !!}"><span class="fa fa-plus"></span> Add new category</a>
+                                    <a class="btn btn-info btn-block" href="{!! route('category.create') !!}"><span class="fa fa-plus"></span> Add new category</a>
                                 </div>
                             </div>
                         </form>

@@ -6,22 +6,15 @@
 
         <div class="row">
             <div class="col-md-12">
-
-                <div class="panel panel-default push-up-20">
+                <div class="panel panel-info push-up-20">
                     <div class="panel-body">
                         <form class="form-horizontal">
-                            <div class="form-group">
-                                {{-- <div class="col-md-8">
-                                    <h2 style="margin: 0px">All Links</h2>
-                                </div> --}}
-                                <div class="col-md-12">
-                                    <a class="btn btn-success btn-block" href="{!! route('storedurl.create') !!}"><span class="fa fa-plus"></span> Add new link</a>
-                                </div>
+                            <div class="col-md-12">
+                                <a class="btn btn-info btn-block" href="{!! route('storedurl.create') !!}"><span class="fa fa-plus"></span> Add new link</a>
                             </div>
                         </form>
                     </div>
                 </div>
-
             </div>
         </div>
 
@@ -48,43 +41,6 @@
 
         <div class="row">
             <div class="col-md-12">
-
-                <!-- PROFILE WIDGET -->
-                {{-- <div class="col-md-4">
-
-                    <div class="panel panel-default">
-                        <div class="panel-body profile bg-info">
-
-                            <div class="profile-data" style="padding: inherit;">
-                                <div class="profile-data-name">John Doe</div>
-                                <div class="profile-data-title">UI/UX Designer</div>
-                            </div>
-                            <div class="profile-controls">
-                                <a style="top: 22px" href="#" class="profile-control-left"><span class="fa fa-twitter"></span></a>
-                                <a style="top: 22px" href="pages-messages.html" class="profile-control-right"><span class="fa fa-envelope"></span></a>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="col-md-4">
-
-                    <div class="widget widget-success widget-no-subtitle">
-                        <div class="widget-big-int">$ <span class="num-count">4,381</span></div>
-                        <div class="widget-subtitle">Latest transaction</div>
-                        <div class="widget-controls">
-                            <a href="#" class="widget-control-left"><span class="fa fa-cloud"></span></a>
-                            <a href="#" class="widget-control-right"><span class="fa fa-envelope"></span></a>
-                        </div>
-                    </div>
-
-                </div> --}}
-                <!-- END PROFILE WIDGET -->
-
-
-
                 <!-- START DEFAULT DATATABLE -->
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -108,7 +64,7 @@
                             </thead>
                             <tbody>
                                 @php
-                                    $i=1;
+                                $i=1;
                                 @endphp
                                 @if ($storedUrls)
                                     @foreach ($storedUrls as $storedUrl)
@@ -135,8 +91,6 @@
                 <!-- END DEFAULT DATATABLE -->
             </div>
         </div>
-
-
 
     </div>
     <!-- END PAGE CONTENT WRAPPER -->
