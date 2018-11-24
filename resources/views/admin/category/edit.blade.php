@@ -1,13 +1,6 @@
 @extends('layouts.admin')
 @section('content')
 
-    <!-- START BREADCRUMB -->
-    <ul class="breadcrumb">
-        <li><a href="#">Home</a></li>
-        <li class="active">Category</li>
-    </ul>
-    <!-- END BREADCRUMB -->
-
     <!-- PAGE CONTENT WRAPPER -->
     <div class="page-content-wrap">
 
@@ -19,7 +12,7 @@
 
                     @include('includes.errors')
 
-                    <div class="panel panel-default">
+                    <div class="panel panel-default push-up-20">
                         <div class="panel-heading">
                             <h3 class="panel-title"><strong>Edit Category</strong></h3>
                         </div>

@@ -24,7 +24,7 @@
                 <!-- START X-NAVIGATION -->
                 <ul class="x-navigation">
                     <li class="xn-logo">
-                        <a href="{!! route('home') !!}">Joli Admin</a>
+                        <a href="{!! route('home') !!}">Stored URL</a>
                         <a href="#" class="x-navigation-control"></a>
                     </li>
                     <li class="xn-profile">
@@ -36,7 +36,7 @@
                                 <img src="{!! asset('admin/assets/images/users/no-image.jpg') !!}" alt="John Doe"/>
                             </div>
                             <div class="profile-data">
-                                <div class="profile-data-name">John Doe</div>
+                                <div class="profile-data-name">John Due</div>
                                 <div class="profile-data-title">Web Developer/Designer</div>
                             </div>
                         </div>
@@ -45,7 +45,7 @@
                         <a href="{!! route('home') !!}"><span class="fa fa-desktop"></span> <span class="xn-text">Dashboard</span></a>
                     </li>
                     <li>
-                        <a href="pages-profile.html" class="profile-control-left"><span class="fa fa-user"></span> <span class="xn-text">Profile</span></a>
+                        <a href="{!! route('profiles.index') !!}" class="profile-control-left"><span class="fa fa-user"></span> <span class="xn-text">Profile</span></a>
                     </li>
                     <li>
                         <a href="{!! route('category.index') !!}"><span class="fa fa-save"></span> <span class="xn-text">Category</span></a>

@@ -1,19 +1,13 @@
 @extends('layouts.admin')
 @section('content')
 
-    <!-- START BREADCRUMB -->
-    <ul class="breadcrumb">
-        <li class="active"><a href="#">Home</a></li>
-    </ul>
-    <!-- END BREADCRUMB -->
-
     <!-- PAGE CONTENT WRAPPER -->
     <div class="page-content-wrap">
 
         <div class="row">
             <div class="col-md-12">
 
-                <div class="panel panel-default">
+                <div class="panel panel-default push-up-20">
                     <div class="panel-body">
                         <form class="form-horizontal">
                             <div class="form-group">
