@@ -83,6 +83,12 @@
                                             </td>
                                             <td>{{ $storedUrl->title }}</td>
                                             <td>
+                                                <div style="width:1px;height:1px;color;white;overflow:hidden" class="" id="copy{{ $storedUrl->id }}">
+                                                    {{ $storedUrl->url }}
+                                                </div>
+                                                <button class="btn btn-warning btn-rounded btn-sm" type="button" name="button" onclick="CopyToClipboard('copy{{ $storedUrl->id }}')">
+                                                    Copy
+                                                </button>
                                                 <a href="{{ $storedUrl->url }}" target="_blank" class="btn btn-info btn-rounded btn-sm">Click</a>
                                             </td>
                                             <td>
@@ -102,5 +108,23 @@
 
     </div>
     <!-- END PAGE CONTENT WRAPPER -->
+    <script type="text/javascript">
+    function CopyToClipboard(containerid) {
+    if (document.selection) {
+    var range = document.body.createTextRange();
+    range.moveToElementText(document.getElementById(containerid));
+    range.select().createTextRange();
+    document.execCommand("copy");
+    toastr.info("Copied");
+    location.reload();
 
+    } else if (window.getSelection) {
+    var range = document.createRange();
+     range.selectNode(document.getElementById(containerid));
+     window.getSelection().addRange(range);
+     document.execCommand("copy");
+     toastr.info("Copied");
+     location.reload();
+    }}
+    </script>
 @endsection

@@ -1,6 +1,9 @@
 @extends('layouts.admin')
 @section('content')
-
+<style media="screen">
+textarea::-moz-selection { background: #18c3ab; color:white}
+textarea::selection { background: #18c3ab; color:white }
+</style>
     <!-- PAGE CONTENT WRAPPER -->
     <div class="page-content-wrap">
 
@@ -31,10 +34,13 @@
 
                             <div class="widget widget-info widget-padding-sm">
                                 <div class="widget-big-int" style="font-size: 20px">{{ $singleCat->title }}</div>
-                                <div class="widget-subtitle">{{ $singleCat->url }}</div>
+                                <div class="widget-subtitle" id="div1" >
+
+                                    {{ $singleCat->url }}
+                                </div>
                                 <div class="widget-buttons widget-c3">
                                     <div class="col">
-                                        <a href="#"><span class="fa fa-copy"></span></a>
+                                        <a href="#" onclick="CopyToClipboard('div1')"><span class="fa fa-copy"></span></a>
                                     </div>
                                     <div class="col">
                                         <a href="#"><span class="fa fa-hand-pointer"></span></a>
@@ -82,5 +88,37 @@
 
     </div>
     <!-- PAGE CONTENT WRAPPER -->
+{{-- <script type="text/javascript">
+function myFunction() {
+/* Get the text field */
+var copyText = document.getElementById("url");
 
+/* Select the text field */
+copyText.select();
+
+/* Copy the text inside the text field */
+document.execCommand("copy");
+
+/* Alert the copied text */
+toastr.info("Copied");
+}
+</script> --}}
+
+<script type="text/javascript">
+function CopyToClipboard(containerid) {
+if (document.selection) {
+var range = document.body.createTextRange();
+range.moveToElementText(document.getElementById(containerid));
+range.select().createTextRange();
+document.execCommand("copy");
+toastr.info("Copied");
+
+} else if (window.getSelection) {
+var range = document.createRange();
+ range.selectNode(document.getElementById(containerid));
+ window.getSelection().addRange(range);
+ document.execCommand("copy");
+ toastr.info("Copied");
+}}
+</script>
 @endsection
