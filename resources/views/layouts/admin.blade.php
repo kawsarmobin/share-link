@@ -36,8 +36,12 @@
                                 <img src="{!! asset('admin/assets/images/users/no-image.jpg') !!}" alt="John Doe"/>
                             </div>
                             <div class="profile-data">
-                                <div class="profile-data-name">John Due</div>
-                                <div class="profile-data-title">Web Developer/Designer</div>
+                                <div class="profile-data-name">{{ Auth::user()->name }}</div>
+                                @if ($profiles)
+                                    @foreach ($profiles as $profile)
+                                        <div class="profile-data-title">{{ $profile->status }}</div>
+                                    @endforeach
+                                @endif
                             </div>
                         </div>
                     </li>
@@ -69,14 +73,6 @@
                         <a href="#" class="x-navigation-minimize"><span class="fa fa-dedent"></span></a>
                     </li>
                     <!-- END TOGGLE NAVIGATION -->
-
-                    <!-- SEARCH -->
-                    {{-- <li class="xn-search">
-                        <form role="form">
-                            <input type="text" name="search" placeholder="Search..."/>
-                        </form>
-                    </li> --}}
-                    <!-- END SEARCH -->
 
                     <!-- SIGN OUT -->
                     <li class="xn-icon-button pull-right">

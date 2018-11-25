@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Auth;
 use Session;
 use Illuminate\Http\Request;
 use App\Models\Admin\Category;
@@ -9,6 +10,10 @@ use App\Http\Controllers\Controller;
 
 class CategoriesController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
