@@ -26,13 +26,21 @@
                         <h3 class="panel-title">Category List</h3>
                     </div>
                     <div class="panel-body">
-                        <ul class="list-tags">
-                            @if ($categories)
-                                @foreach ($categories as $category)
-                                    <li><a href="{!! route('category.single', $category->id) !!}"><span class="fa fa-tag"></span> {{ $category->name }}</a></li>
-                                @endforeach
-                            @endif
-                        </ul>
+                        @if ($categories->count() > 0)
+                            <ul class="list-tags">
+                                @if ($categories)
+                                    @foreach ($categories as $category)
+                                        <li><a href="{!! route('category.single', $category->id) !!}"><span class="fa fa-tag"></span> {{ $category->name }}</a></li>
+                                    @endforeach
+                                @endif
+                            </ul>
+                        @else
+                            <div class="text-center">
+                                <h1 style="font-family: Comic">
+                                    <b>Create a category...</b>
+                                </h1>
+                            </div>
+                        @endif
                     </div>
                 </div>
             </div>

@@ -34,6 +34,13 @@ class StoredUrlsController extends Controller
      */
     public function create()
     {
+        $categories = Category::all();
+        if ($categories->count() == 0) {
+          Session::flash('info', 'You must have some categories before attempting to add a new link/url.');
+
+          return redirect()->back();
+        }
+
         return view('admin.storedUrl.create')
                 ->with('categories', Category::all());
     }
