@@ -27,8 +27,7 @@
                     <a href="{!! route('home') !!}">Stored URL</a>
                     <a href="#" class="x-navigation-control"></a>
                 </li>
-                @if ($profiles)
-                    @foreach ($profiles as $profile)
+                @if ($profile)
                         <li class="xn-profile">
                             <a href="#" class="profile-mini">
                                 <img src="{{ $profile->image }}" alt="John Doe"/>
@@ -45,7 +44,6 @@
                                 </div>
                             </div>
                         </li>
-                    @endforeach
                 @endif
                 <li>
                     <a href="{!! route('home') !!}"><span class="fa fa-desktop"></span> <span class="xn-text">Dashboard</span></a>
