@@ -21,28 +21,26 @@
         </div>
 
         <div class="row">
-            @if ($profiles)
-                @foreach ($profiles as $profile)
-                    <div class="col-md-3">
-                        <!-- CONTACT ITEM -->
-                        <div class="panel panel-default">
-                            <div class="panel-body profile">
-                                <div class="profile-image">
-                                    <img src="{{ $profile->image }}" alt="Samuel Leroy Jackson"/>
-                                </div>
-                                <div class="profile-data">
-                                    {{-- <div class="profile-data-name">Alex Sonar</div> --}}
-                                    <div class="profile-data-title">{{ $profile->status }}</div>
-                                </div>
-                                <div class="profile-controls">
-                                    <a style="top: 22px" href="{!! route('profiles.create') !!}" class="profile-control-right"><span class="fa fa-edit"></span></a>
-                                    {{-- <a style="top: 22px" href="#" onclick="return confirm('Are you sure?')" class="profile-control-left"><span class="fa fa-trash-o"></span></a> --}}
-                                </div>
+            @if ($profile)
+                <div class="col-md-3">
+                    <!-- CONTACT ITEM -->
+                    <div class="panel panel-default">
+                        <div class="panel-body profile">
+                            <div class="profile-image">
+                                <img src="{{ $profile->image }}" alt="Samuel Leroy Jackson"/>
+                            </div>
+                            <div class="profile-data">
+                                {{-- <div class="profile-data-name">Alex Sonar</div> --}}
+                                <div class="profile-data-title">{{ $profile->status }}</div>
+                            </div>
+                            <div class="profile-controls">
+                                <a style="top: 22px" href="{!! route('profiles.create') !!}" class="profile-control-right"><span class="fa fa-edit"></span></a>
+                                {{-- <a style="top: 22px" href="#" onclick="return confirm('Are you sure?')" class="profile-control-left"><span class="fa fa-trash-o"></span></a> --}}
                             </div>
                         </div>
-                        <!-- END CONTACT ITEM -->
                     </div>
-                @endforeach
+                    <!-- END CONTACT ITEM -->
+                </div>
             @endif
         </div>
 

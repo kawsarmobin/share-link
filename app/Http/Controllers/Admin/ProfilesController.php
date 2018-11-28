@@ -22,7 +22,7 @@ class ProfilesController extends Controller
     public function index()
     {
         return view('admin.profiles.index')
-                ->with('profiles', Profile::all());
+                ->with('profile', Profile::where('user_id', Auth::user()->id)->first());
     }
 
     /**
@@ -33,7 +33,7 @@ class ProfilesController extends Controller
     public function create()
     {
         return view('admin.profiles.create')
-                ->with('profiles', Profile::all()->first());
+                ->with('profiles', Profile::where('user_id', Auth::user()->id)->first());
     }
 
     /**
@@ -57,7 +57,7 @@ class ProfilesController extends Controller
             if ($request->hasFile('image')) {
               $avatar = $request->image;
               $avatar_new_name = time().'-'.$avatar->getClientOriginalName();
-              $avatar->move('uploads/profiles', $avatar_new_name);
+              $avatar->move('public/uploads/profiles', $avatar_new_name);
               $profile->image = $avatar_new_name;
             }
 
@@ -71,7 +71,7 @@ class ProfilesController extends Controller
             // Create...
             $avatar = $request->image;
             $avatar_new_name = time().'-'.$avatar->getClientOriginalName();
-            $avatar->move('uploads/profiles', $avatar_new_name);
+            $avatar->move('public/uploads/profiles', $avatar_new_name);
 
             $profile = new Profile();
             $profile->user_id = $user_id;

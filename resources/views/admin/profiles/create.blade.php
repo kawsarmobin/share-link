@@ -32,7 +32,7 @@
                                 <div class="col-md-6 col-xs-12">
                                     <div class="input-group">
                                         <span class="input-group-addon"><span class="fa fa-align-justify"></span></span>
-                                        <input type="text" name="status" class="form-control" value="{{ $profiles->status }}"/>
+                                        <input type="text" name="status" class="form-control" value="{{ isset($profiles->status) ? $profiles->status : '' }}"/>
                                     </div>
                                 </div>
                             </div>
